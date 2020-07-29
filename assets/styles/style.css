@@ -15,7 +15,6 @@ html {
 body {
     font-family: sans-serif;
     overflow-x: hidden;
-    overflow: hidden;
 }
 
 nav {
@@ -216,6 +215,7 @@ img {
   padding-top: 100px;
   /* padding-bottom: 240px; */
   background-color: rgb(255, 255, 255);
+  max-width: 100%;
 } 
 
 .layanan {
