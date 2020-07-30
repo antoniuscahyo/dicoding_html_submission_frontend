@@ -7,6 +7,44 @@ h1  {
   font-size: xx-large;
 }
 
+h2 {
+  color: #000000;
+  font-family: sans-serif;
+}
+
+h3 {
+  color: #000000
+}
+
+@media screen and (max-width: 992px) {
+  h1  {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: x-large;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 768px) {
+  h1  {
+    font-size: larger;
+  }
+  h2 {
+    font-size: larger;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+  h1  {
+    font-size: small;
+  }
+  h2 {
+    font-size: small;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   transition: all 0.5s;
@@ -46,8 +84,14 @@ nav ul li a:hover {
 
 nav .logo {
   color: white;
-  font-family: monospace;
+  font-family: 'Dimitri Swank';
+  
   font-size: 150%;
+}
+
+@font-face {
+  font-family: 'Dimitri Swank';
+  src: url('/assets/styles/fonts/dimis.ttf') format('truetype');
 }
 
 .menu-toggle {
@@ -143,32 +187,17 @@ nav .logo {
   }
 }
 
-h2 {
-    color: #000000
-}
-
-h3 {
-    color: #000000
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
-/* .container {
-  width: 100%;
-  padding-right: 14px;
-  padding-left: 14px;
-  margin-right: auto;
-  margin-left: auto;
-} */
 .container {
   display: flex;
 
   /* Properti lainnya */
   width: auto;
-  height: 250px;
+  /* height: 250px; */
   /* background-color: #11C5C6; */
   /* border: 2px solid black; */
   padding: 20px;
@@ -213,27 +242,27 @@ img {
 
 .beranda {
   padding-top: 100px;
-  /* padding-bottom: 240px; */
+  padding-bottom: 240px;
   background-color: rgb(255, 255, 255);
   max-width: 100%;
 } 
 
 .layanan {
   padding-top: 100px;
-  /* padding-bottom: 240px; */
-  background-color: seagreen;
+  padding-bottom: 15%;
+  background-color: rgb(255, 255, 255);
 } 
 
 .tentangkami {
   padding-top: 100px;
-  /* padding-bottom: 240px; */
-  background-color: darkblue;
+  padding-bottom: 10%;
+  background-color: rgb(255, 255, 255);
 } 
 
 .kontakkami {
   padding-top: 100px;
-  /* padding-bottom: 240px; */
-  background-color: darkorchid;
+  padding-bottom: 10%;
+  background-color: rgb(255, 255, 255);
 }
 
 .box {
@@ -257,7 +286,7 @@ img {
 
 .image-responsive {
   width: 100%;
-  max-width: 400px;
+  /* max-width: 400px; */
   height: auto;
 }
 
@@ -268,6 +297,17 @@ img {
   margin: auto;
   text-align: center;
   font-family: arial;
+  border-radius: 10px;
+}
+
+.card-layanan {
+  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 10px;
 }
 
 .title {
@@ -298,9 +338,133 @@ button:hover, a:hover {
   border-radius: 50%;
 }
 
+.text-judul-menu {
+  font-family: 'Dimitri Swank';
+  font-size: 250%;
+}
+
+/* Layanan */
+.container-layanan {
+  display: flex;
+
+  /* Properti lainnya */
+  height: 250px;
+  /* background-color: #11C5C6; */
+  /* border: 2px solid black; */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  .container-layanan {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.box-layanan {
+  flex-grow: 1;
+
+  /* properti lainnya */
+  margin: 15px;
+  border-radius: 10px;
+}
+
+/* Contact Form */
+.wrapper {
+  margin: 0px auto 0;
+  width: 95%;
+  max-width: 680px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: deeppink;
+  border-radius: 10px;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h1 {
+  letter-spacing: 1px;
+}
+
+.form {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.top-form,
+.middle-form,
+.bottom-form {
+  width: 100%;
+  min-height: 65px;
+  margin: 10px 0;
+}
+
+.form input[type="text"],
+.form textarea {
+  border: 2px solid #fff;
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 2px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #4ca1af;
+  outline: none;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.0125),
+    0 0 8px rgba(76, 161, 175, 0.5);
+}
+
+.form .label {
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+/* top-contact */
+.top-form .inner-form {
+  width: 29.9%;
+  float: left;
+  margin-right: 5%;
+}
+
+.top-form .inner-form:last-child {
+  margin-right: 0;
+}
+
+
+/* middle-form */
+.middle-form {
+  clear: both;
+}
+
+/* bottom-form */
+.bottom-form textarea {
+  height: 80px;
+}
+
+.btn {
+  background: #4ca1af;
+  width: 200px;
+  padding: 10px 0;
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+/* Contact Form */
+
+
 /* script footer*/
 footer {
-   padding: 20px;
    color: white;
    background-color: #FF0100;
    text-align: center;
