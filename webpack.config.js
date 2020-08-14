@@ -1,11 +1,15 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
- 
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //dipasang via npm
+
 module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
+    },
+    devServer: {
+        inline: false,
+        contentBase: "./dist",
     },
     mode: "production",
     module: {
@@ -21,7 +25,8 @@ module.exports = {
                         loader: "css-loader"
                     }
                 ]
-            },
+            }
+            ,
 
             /* babel loader */
             {
@@ -36,17 +41,14 @@ module.exports = {
                     }
                 ]
             }
-            
-        ],
-
-        /* plugin */
-        plugins: [
-            /* HTML Webpack Plugin */
-            new HtmlWebpackPlugin({
-                template: "./index.html",
-                filename: "index.html"
-            })
         ]
-
-    }
+    },
+    
+    plugins: [
+        // HTML Webpack Plugin
+        new HtmlWebpackPlugin({
+            template: "./index.html",
+            filename: "index.html"
+        })
+    ]
 }
