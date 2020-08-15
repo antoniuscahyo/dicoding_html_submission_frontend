@@ -8,7 +8,7 @@ class CardLayanan extends HTMLElement {
         this.innerHTML = `
         <div class="card-layanan">
         <br>
-        <img src="src/images/${this.image}" style="width:50%" class="image-round">
+        <img src="${this.image}" style="width:50%" class="image-round">
         <H3>${this.judul}</h3>
         <br><hr><br>
         <p class="title">${this.deskripsi}</p><br>

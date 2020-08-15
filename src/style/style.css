@@ -99,7 +99,7 @@
   nav .logo {
     color: white;
     font-family: 'Anton', sans-serif;
-    
+    text-shadow: 1px 1px 11px #000000;
     font-size: 150%;
   }
 
@@ -355,7 +355,7 @@
   /* Layanan */
   .container-layanan {
     display: flex;
-  
+    flex-wrap: wrap;
     /* Properti lainnya */
     height: 250px;
     /* background-color: #11C5C6; */
@@ -474,10 +474,13 @@
   
   /* script footer*/
   footer {
-     color: white;
-     background-color: #FF0100;
-     text-align: center;
-     font-weight: bold;
-     width: 100%;
+    color: white;
+    background-image: url('https://images.assetsdelivery.com/compings_v2/meysye/meysye1704/meysye170400022.jpg');
+    background-repeat: repeat;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
   }
   /* script footer*/

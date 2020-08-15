@@ -7,11 +7,6 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
-    devServer: {
-        inline: false,
-        contentBase: "./dist",
-    },
-    mode: "production",
     module: {
 
         rules: [
@@ -28,7 +23,6 @@ module.exports = {
             }
         ]
     },
-    
     plugins: [
         // HTML Webpack Plugin
         new HtmlWebpackPlugin({
