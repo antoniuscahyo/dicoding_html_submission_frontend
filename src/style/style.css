@@ -61,7 +61,9 @@
   
   nav {
     display: flex;
-    background-color: #FF0100;
+    background-image: url('https://images.assetsdelivery.com/compings_v2/meysye/meysye1704/meysye170400022.jpg');
+    background-repeat: repeat;
+    /* background-color: #FF0100; */
     justify-content: space-around;
     padding: 20px 0;
     height: 25px;
