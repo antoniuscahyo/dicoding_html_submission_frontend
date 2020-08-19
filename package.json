@@ -18,7 +18,8 @@
     "webpack-merge": "^5.1.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "build:dev": "webpack --config webpack.dev.js",
     "start-dev": "webpack-dev-server --config webpack.dev.js --open"
   },
   "author": "",

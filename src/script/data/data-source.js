@@ -37,13 +37,6 @@ function main() {
     
         xhr.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a");
         xhr.send();
-
-        const responseJson = JSON.parse(this.responseText);
-        if(responseJson.error) {
-            showResponseMessage(responseJson.message);
-        } else {
-            ShowAllDrinks(responseJson.drinks);
-        }
     });
 
 }
